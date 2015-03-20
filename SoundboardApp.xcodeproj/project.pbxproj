@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1640A1181ABCBEFB005380CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640A1171ABCBEFB005380CE /* AppDelegate.swift */; };
 		1640A11B1ABCBEFB005380CE /* SoundboardApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1640A1191ABCBEFB005380CE /* SoundboardApp.xcdatamodeld */; };
-		1640A11D1ABCBEFB005380CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640A11C1ABCBEFB005380CE /* ViewController.swift */; };
+		1640A11D1ABCBEFB005380CE /* SoundListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640A11C1ABCBEFB005380CE /* SoundListViewController.swift */; };
 		1640A1201ABCBEFB005380CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1640A11E1ABCBEFB005380CE /* Main.storyboard */; };
 		1640A1221ABCBEFB005380CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1640A1211ABCBEFB005380CE /* Images.xcassets */; };
 		1640A1251ABCBEFB005380CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1640A1231ABCBEFB005380CE /* LaunchScreen.xib */; };
@@ -31,7 +31,7 @@
 		1640A1161ABCBEFB005380CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1640A1171ABCBEFB005380CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1640A11A1ABCBEFB005380CE /* SoundboardApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoundboardApp.xcdatamodel; sourceTree = "<group>"; };
-		1640A11C1ABCBEFB005380CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1640A11C1ABCBEFB005380CE /* SoundListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundListViewController.swift; sourceTree = "<group>"; };
 		1640A11F1ABCBEFB005380CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1640A1211ABCBEFB005380CE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1640A1241ABCBEFB005380CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				1640A1171ABCBEFB005380CE /* AppDelegate.swift */,
-				1640A11C1ABCBEFB005380CE /* ViewController.swift */,
+				1640A11C1ABCBEFB005380CE /* SoundListViewController.swift */,
 				1640A11E1ABCBEFB005380CE /* Main.storyboard */,
 				1640A1211ABCBEFB005380CE /* Images.xcassets */,
 				1640A1231ABCBEFB005380CE /* LaunchScreen.xib */,
@@ -164,6 +164,7 @@
 				TargetAttributes = {
 					1640A1111ABCBEFB005380CE = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = BK6A3NXZJC;
 					};
 					1640A1291ABCBEFB005380CE = {
 						CreatedOnToolsVersion = 6.2;
@@ -215,7 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1640A11D1ABCBEFB005380CE /* ViewController.swift in Sources */,
+				1640A11D1ABCBEFB005380CE /* SoundListViewController.swift in Sources */,
 				1640A11B1ABCBEFB005380CE /* SoundboardApp.xcdatamodeld in Sources */,
 				1640A1181ABCBEFB005380CE /* AppDelegate.swift in Sources */,
 			);
@@ -342,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SoundboardApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +354,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SoundboardApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

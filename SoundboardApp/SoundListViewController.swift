@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SoundListViewController.swift
 //  SoundboardApp
 //
 //  Created by Adam Hegedus on 3/20/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SoundListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
