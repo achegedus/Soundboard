@@ -14,6 +14,7 @@
 		1640A1221ABCBEFB005380CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1640A1211ABCBEFB005380CE /* Images.xcassets */; };
 		1640A1251ABCBEFB005380CE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1640A1231ABCBEFB005380CE /* LaunchScreen.xib */; };
 		1640A1311ABCBEFB005380CE /* SoundboardAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640A1301ABCBEFB005380CE /* SoundboardAppTests.swift */; };
+		1669619C1ABCC46400450DE2 /* TestSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1669619B1ABCC46400450DE2 /* TestSound.m4a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		1640A12A1ABCBEFB005380CE /* SoundboardAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoundboardAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1640A12F1ABCBEFB005380CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1640A1301ABCBEFB005380CE /* SoundboardAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundboardAppTests.swift; sourceTree = "<group>"; };
+		1669619B1ABCC46400450DE2 /* TestSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestSound.m4a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				1640A1171ABCBEFB005380CE /* AppDelegate.swift */,
 				1640A11C1ABCBEFB005380CE /* SoundListViewController.swift */,
 				1640A11E1ABCBEFB005380CE /* Main.storyboard */,
+				1669619B1ABCC46400450DE2 /* TestSound.m4a */,
 				1640A1211ABCBEFB005380CE /* Images.xcassets */,
 				1640A1231ABCBEFB005380CE /* LaunchScreen.xib */,
 				1640A1191ABCBEFB005380CE /* SoundboardApp.xcdatamodeld */,
@@ -198,6 +201,7 @@
 			files = (
 				1640A1201ABCBEFB005380CE /* Main.storyboard in Resources */,
 				1640A1251ABCBEFB005380CE /* LaunchScreen.xib in Resources */,
+				1669619C1ABCC46400450DE2 /* TestSound.m4a in Resources */,
 				1640A1221ABCBEFB005380CE /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +418,7 @@
 				1640A1361ABCBEFB005380CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1640A1371ABCBEFB005380CE /* Build configuration list for PBXNativeTarget "SoundboardAppTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +427,7 @@
 				1640A1391ABCBEFB005380CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
