@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wki-EZ-HfB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -39,7 +40,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Soundboard" id="23V-45-z1i"/>
+                    <navigationItem key="navigationItem" title="Soundboard" id="23V-45-z1i">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="r65-pR-LwN">
+                            <connections>
+                                <segue destination="V1k-XS-BKa" kind="presentation" id="adB-Jh-z7y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="3ct-nM-YIL" id="0tC-B2-SaE"/>
                     </connections>
@@ -47,6 +54,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="825" y="-101"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="shc-mO-k9G">
+            <objects>
+                <viewController id="V1k-XS-BKa" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vk4-Jh-G0o"/>
+                        <viewControllerLayoutGuide type="bottom" id="be6-Db-2kL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="of5-he-V5E">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFF-Vg-weU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8pt-4R-DaR"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="New Sound" id="goD-Da-9rl">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LDl-kd-R6f"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hX0-Ih-XKz"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inY-Rj-joG">
+                                <rect key="frame" x="36" y="64" width="546" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="be6-Db-2kL" firstAttribute="top" secondItem="inY-Rj-joG" secondAttribute="bottom" constant="490" id="Hsg-PP-x99"/>
+                            <constraint firstAttribute="trailing" secondItem="TFF-Vg-weU" secondAttribute="trailing" id="ONU-dd-dC5"/>
+                            <constraint firstItem="TFF-Vg-weU" firstAttribute="top" secondItem="of5-he-V5E" secondAttribute="top" id="TVC-7z-mH9"/>
+                            <constraint firstItem="inY-Rj-joG" firstAttribute="top" secondItem="TFF-Vg-weU" secondAttribute="bottom" constant="20" id="dou-Go-xij"/>
+                            <constraint firstItem="inY-Rj-joG" firstAttribute="leading" secondItem="of5-he-V5E" secondAttribute="leadingMargin" constant="20" id="olt-PZ-diR"/>
+                            <constraint firstItem="TFF-Vg-weU" firstAttribute="leading" secondItem="of5-he-V5E" secondAttribute="leading" id="t0Q-8X-MP9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="inY-Rj-joG" secondAttribute="trailing" constant="2" id="tYO-qk-q0x"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rMO-F5-3DP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1522" y="-101"/>
         </scene>
     </scenes>
 </document>
