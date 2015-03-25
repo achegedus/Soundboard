@@ -16,6 +16,7 @@
 		1640A1311ABCBEFB005380CE /* SoundboardAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1640A1301ABCBEFB005380CE /* SoundboardAppTests.swift */; };
 		1669619C1ABCC46400450DE2 /* TestSound.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 1669619B1ABCC46400450DE2 /* TestSound.m4a */; };
 		16724AF01AC2061000212506 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16724AEF1AC2061000212506 /* Sound.swift */; };
+		669F7D511AC26A5C00FBA642 /* NewSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669F7D501AC26A5C00FBA642 /* NewSoundViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		1640A1301ABCBEFB005380CE /* SoundboardAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundboardAppTests.swift; sourceTree = "<group>"; };
 		1669619B1ABCC46400450DE2 /* TestSound.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = TestSound.m4a; sourceTree = "<group>"; };
 		16724AEF1AC2061000212506 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		669F7D501AC26A5C00FBA642 /* NewSoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewSoundViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				1640A1171ABCBEFB005380CE /* AppDelegate.swift */,
 				16724AEF1AC2061000212506 /* Sound.swift */,
 				1640A11C1ABCBEFB005380CE /* SoundListViewController.swift */,
+				669F7D501AC26A5C00FBA642 /* NewSoundViewController.swift */,
 				1640A11E1ABCBEFB005380CE /* Main.storyboard */,
 				1669619B1ABCC46400450DE2 /* TestSound.m4a */,
 				1640A1211ABCBEFB005380CE /* Images.xcassets */,
@@ -227,6 +230,7 @@
 				1640A11B1ABCBEFB005380CE /* SoundboardApp.xcdatamodeld in Sources */,
 				1640A1181ABCBEFB005380CE /* AppDelegate.swift in Sources */,
 				16724AF01AC2061000212506 /* Sound.swift in Sources */,
+				669F7D511AC26A5C00FBA642 /* NewSoundViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

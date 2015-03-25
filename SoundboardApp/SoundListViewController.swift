@@ -54,6 +54,11 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         return cell
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var newSoundViewController = segue.destinationViewController as NewSoundViewController
+        newSoundViewController.previousSoundListViewController = self
+    }
+    
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         

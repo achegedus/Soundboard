@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wki-EZ-HfB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wki-EZ-HfB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="825" y="-101"/>
         </scene>
-        <!--View Controller-->
+        <!--New Sound View Controller-->
         <scene sceneID="shc-mO-k9G">
             <objects>
-                <viewController id="V1k-XS-BKa" sceneMemberID="viewController">
+                <viewController id="V1k-XS-BKa" customClass="NewSoundViewController" customModule="SoundboardApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vk4-Jh-G0o"/>
                         <viewControllerLayoutGuide type="bottom" id="be6-Db-2kL"/>
@@ -74,28 +74,59 @@
                                 </constraints>
                                 <items>
                                     <navigationItem title="New Sound" id="goD-Da-9rl">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LDl-kd-R6f"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hX0-Ih-XKz"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LDl-kd-R6f">
+                                            <connections>
+                                                <action selector="cancelTapped:" destination="V1k-XS-BKa" id="hlF-gg-uJg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hX0-Ih-XKz">
+                                            <connections>
+                                                <action selector="saveTapped:" destination="V1k-XS-BKa" id="NTk-8S-YW1"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inY-Rj-joG">
-                                <rect key="frame" x="36" y="64" width="546" height="46"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name of sound" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inY-Rj-joG">
+                                <rect key="frame" x="36" y="64" width="528" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eKE-AY-hNe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLz-2U-G7R">
+                                <rect key="frame" x="36" y="124" width="528" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WCh-vz-gJG"/>
+                                </constraints>
+                                <state key="normal" title="RECORD">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="be6-Db-2kL" firstAttribute="top" secondItem="inY-Rj-joG" secondAttribute="bottom" constant="490" id="Hsg-PP-x99"/>
+                            <constraint firstItem="be6-Db-2kL" firstAttribute="top" secondItem="inY-Rj-joG" secondAttribute="bottom" constant="20" id="Hsg-PP-x99"/>
                             <constraint firstAttribute="trailing" secondItem="TFF-Vg-weU" secondAttribute="trailing" id="ONU-dd-dC5"/>
                             <constraint firstItem="TFF-Vg-weU" firstAttribute="top" secondItem="of5-he-V5E" secondAttribute="top" id="TVC-7z-mH9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tLz-2U-G7R" secondAttribute="trailing" constant="20" id="VjY-4v-RoJ"/>
+                            <constraint firstItem="tLz-2U-G7R" firstAttribute="top" secondItem="inY-Rj-joG" secondAttribute="bottom" constant="30" id="aJ4-fk-6Vo"/>
                             <constraint firstItem="inY-Rj-joG" firstAttribute="top" secondItem="TFF-Vg-weU" secondAttribute="bottom" constant="20" id="dou-Go-xij"/>
+                            <constraint firstItem="tLz-2U-G7R" firstAttribute="leading" secondItem="of5-he-V5E" secondAttribute="leadingMargin" constant="20" id="nHh-jS-yOR"/>
                             <constraint firstItem="inY-Rj-joG" firstAttribute="leading" secondItem="of5-he-V5E" secondAttribute="leadingMargin" constant="20" id="olt-PZ-diR"/>
                             <constraint firstItem="TFF-Vg-weU" firstAttribute="leading" secondItem="of5-he-V5E" secondAttribute="leading" id="t0Q-8X-MP9"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="inY-Rj-joG" secondAttribute="trailing" constant="2" id="tYO-qk-q0x"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="inY-Rj-joG" secondAttribute="trailing" constant="20" id="tYO-qk-q0x"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Hsg-PP-x99"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="soundName" destination="inY-Rj-joG" id="QQU-xw-FKq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rMO-F5-3DP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
