@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreData
 
 class SoundListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -27,18 +28,26 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
         var soundPath = NSBundle.mainBundle().pathForResource("TestSound", ofType: "m4a")
         var soundURL = NSURL.fileURLWithPath(soundPath!)
         
-        var sound1 = Sound()
-        sound1.name = "Blah Blah"
-        sound1.URL = soundURL!
+        var context = (UIApplication.sharedApplication().delegate as AppDelegate).managedObjectContext!
+        var sound1 = NSEntityDescription.insertNewObjectForEntityForName("Sound", inManagedObjectContext: context) as Sound
+        sound1.name = "My Sound"
+        sound1.url = soundURL!.absoluteString!
         
-        self.sounds.append(sound1)
+        context.save(nil)
         
+        var request = NSFetchRequest(entityName: "Sound")
         
-        var sound2 = Sound()
-        sound2.name = "Turn down for what?"
-        sound2.URL = soundURL!
+        self.sounds = context.executeFetchRequest(request, error: nil)! as [Sound]
         
-        self.sounds.append(sound2)
+//        var sound1 = Sound()
+//        sound1.name = "Blah Blah"
+//        sound1.URL = soundURL!
+//        self.sounds.append(sound1)
+//        
+//        var sound2 = Sound()
+//        sound2.name = "Turn down for what?"
+//        sound2.URL = soundURL!
+//        self.sounds.append(sound2)
     }
     
     
@@ -61,11 +70,9 @@ class SoundListViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var sound = self.sounds[indexPath.row]
         
-        var soundPath = NSBundle.mainBundle().pathForResource("TestSound", ofType: "m4a")
-        var soundURL = NSURL.fileURLWithPath(soundPath!)
-        
-        self.audioPlayer = AVAudioPlayer(contentsOfURL: soundURL, error: nil)
+//        self.audioPlayer = AVAudioPlayer(contentsOfURL: sound.URL, error: nil)
         self.audioPlayer.play()
     }
 
