@@ -68,9 +68,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TFF-Vg-weU">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8pt-4R-DaR"/>
+                                    <constraint firstAttribute="height" constant="64" id="8pt-4R-DaR"/>
                                 </constraints>
                                 <items>
                                     <navigationItem title="New Sound" id="goD-Da-9rl">
@@ -88,7 +88,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name of sound" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="inY-Rj-joG">
-                                <rect key="frame" x="36" y="64" width="528" height="30"/>
+                                <rect key="frame" x="36" y="84" width="528" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eKE-AY-hNe"/>
                                 </constraints>
@@ -96,7 +96,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLz-2U-G7R">
-                                <rect key="frame" x="36" y="124" width="528" height="30"/>
+                                <rect key="frame" x="36" y="144" width="528" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="WCh-vz-gJG"/>
                                 </constraints>
@@ -112,7 +112,7 @@
                         <constraints>
                             <constraint firstItem="be6-Db-2kL" firstAttribute="top" secondItem="inY-Rj-joG" secondAttribute="bottom" constant="20" id="Hsg-PP-x99"/>
                             <constraint firstAttribute="trailing" secondItem="TFF-Vg-weU" secondAttribute="trailing" id="ONU-dd-dC5"/>
-                            <constraint firstItem="TFF-Vg-weU" firstAttribute="top" secondItem="of5-he-V5E" secondAttribute="top" id="TVC-7z-mH9"/>
+                            <constraint firstItem="TFF-Vg-weU" firstAttribute="top" secondItem="of5-he-V5E" secondAttribute="top" symbolic="YES" id="TVC-7z-mH9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tLz-2U-G7R" secondAttribute="trailing" constant="20" id="VjY-4v-RoJ"/>
                             <constraint firstItem="tLz-2U-G7R" firstAttribute="top" secondItem="inY-Rj-joG" secondAttribute="bottom" constant="30" id="aJ4-fk-6Vo"/>
                             <constraint firstItem="inY-Rj-joG" firstAttribute="top" secondItem="TFF-Vg-weU" secondAttribute="bottom" constant="20" id="dou-Go-xij"/>
